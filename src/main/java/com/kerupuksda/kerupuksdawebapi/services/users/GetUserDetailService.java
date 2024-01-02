@@ -11,7 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
 
 @Slf4j
 @Service
@@ -22,7 +21,7 @@ public class GetUserDetailService implements BaseService<BaseIdRequest, UserResp
 
     @Override
     public UserResponse execute(BaseIdRequest request) {
-        User user = userRepository.findById(UUID.fromString(request.getId())).orElseThrow(
+        User user = userRepository.getUserById(request.getId(), false).orElseThrow(
                 () -> new BadRequestException(AppConstants.USER_NOT_FOUND)
         );
 

@@ -16,6 +16,8 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     Optional<User> findByUsername(String username);
     Boolean existsByUsername(String username);
     Boolean existsByEmail(String email);
+    @Query(value = "SELECT * FROM USERS WHERE IS_DELETED = 0", nativeQuery = true)
+    List<User> getAllUser();
     @Query(value = "SELECT * FROM USERS U JOIN USER_ROLE UR ON U.ID = UR.USER_ID JOIN ROLES R ON R.ID = UR.ROLE_ID " +
             "WHERE U.ID = :userId AND U.IS_DELETED = :isDeleted", nativeQuery = true)
     Optional<User> getUserById(@Param("userId") String userId,

@@ -23,7 +23,7 @@ public class GetUserListService implements BaseService<BaseRequest, UserListResp
 
     @Override
     public UserListResponse execute(BaseRequest request) {
-        List<User> userList = userRepository.findAll();
+        List<User> userList = userRepository.getAllUser();
         List<UserResponse> userResponseList = userList.stream().map(this::mappingUser).collect(Collectors.toList());
 
         return UserListResponse.builder().data(userResponseList).build();
