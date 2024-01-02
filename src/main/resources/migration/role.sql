@@ -1,0 +1,3 @@
+INSERT INTO public.roles (id, created_by, created_date, updated_by, updated_date, is_deleted, role_code, role_name) VALUES('2ef7fe9d-eadf-43b2-bc23-538ded52ca21', 'SYSTEMS', '2023-11-19 16:48:38.090', NULL, NULL, false, 'ROLE_ADMIN', 'Administrator');
+INSERT INTO public.roles (id, created_by, created_date, updated_by, updated_date, is_deleted, role_code, role_name) VALUES('e18e8dc5-bbe0-416d-abea-4056b8d16b50', 'SYSTEMS', '2023-11-19 16:48:38.090', NULL, NULL, false, 'ROLE_CREATOR', 'Content Creator');
+INSERT INTO public.roles (id, created_by, created_date, updated_by, updated_date, is_deleted, role_code, role_name) VALUES('34689b98-7722-4f73-8f1c-20810e1df517', 'SYSTEMS', '2023-11-19 16:48:38.090', NULL, NULL, false, 'ROLE_USER', 'User');
