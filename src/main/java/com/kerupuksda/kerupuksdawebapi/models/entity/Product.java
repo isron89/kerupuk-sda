@@ -24,13 +24,13 @@ public class Product extends BaseEntity {
     @Column(name = "nama", nullable = false)
     private String nama;
 
-    @Column(name = "deskripsi")
+    @Column(name = "deskripsi", length = 1000)
     private String deskripsi;
 
-    @Column(name = "bahan")
+    @Column(name = "bahan", length = 2000)
     private String bahan;
 
-    @Column(name = "cara_membuat")
+    @Column(name = "cara_membuat", length = 3000)
     private String caraMembuat;
 
     @Column(name = "harga")
