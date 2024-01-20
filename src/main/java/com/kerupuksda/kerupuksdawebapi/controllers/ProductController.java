@@ -34,7 +34,7 @@ public class ProductController extends BaseController {
     private final DeleteProductService deleteProductService;
 
 
-    @PreAuthorize("hasRole('ADMIN') or hasRole('CREATOR') or hasRole('USER')")
+//    @PreAuthorize("hasRole('ADMIN') or hasRole('CREATOR') or hasRole('USER')")
     @ApiOperation(value = "Api to get all products", notes = "Api Get all products")
     @ApiResponses(value = { @ApiResponse(code = 200, message = AppConstants.SUCCESS_MSG_SUBMIT),
             @ApiResponse(code = 400, message = AppConstants.ERROR_MSG_BAD_REQUEST),
@@ -48,7 +48,7 @@ public class ProductController extends BaseController {
         return Response.success(response, AppConstants.SUCCESS_MSG_SUBMIT);
     }
 
-    @PreAuthorize("hasRole('ADMIN') or hasRole('CREATOR') or hasRole('USER')")
+//    @PreAuthorize("hasRole('ADMIN') or hasRole('CREATOR') or hasRole('USER')")
     @ApiOperation(value = "Api to get detail product", notes = "Api Get detail product")
     @ApiResponses(value = { @ApiResponse(code = 200, message = AppConstants.SUCCESS_MSG_SUBMIT),
             @ApiResponse(code = 400, message = AppConstants.ERROR_MSG_BAD_REQUEST),
